@@ -33,30 +33,21 @@ def fetch_email() :
     UIDs = coffee.search(['FROM', 'contact@em2.nordstrom.com'])
     print UIDs
 
-
-"""
-# this will allow me to fetch my emails from a specific folder utilizing the UID returned from the previous function.
-creamer = coffee.fetch([#UID which i need to insert ], ['BODY[]', 'FLAGS'])
-emailMessage = pyzmail.PyzMessage.factory(creamer[# UID goes here]['BODY[]'])
+    # this will allow me to fetch my emails from a specific folder utilizing the UID returned from the previous function.
+    creamer = coffee.fetch(UIDs, ['BODY[]'])
+    emailMessage = pyzmail.PyzMessage.factory(creamer[28400 ]['BODY[]'])
 
 
-pprint.pprint(creamer)
+    pprint.pprint(creamer)
 
 
-emailMessage.get_subject()
-emailMessage.get_addresses('from')
-emailMessage.text_part != None
+    emailMessage.get_subject()
+    emailMessage.get_addresses('from')
+    emailMessage.text_part != None
 
-# this will have a payload method that returns email's body as bytes data type.
+    coffee.logout()
+    # this closes the connection 
 
-emailMessage.text_part.get_payload().decode(emailMessage.text_part.charset)
-emailMessage.html != None
-emailMessage.html_part.get_payload().decode(emailMessage.html_part.charset)
-
-coffee.logout()
-"""
-#    # this closes the connection 
-#    emailObject.quit()"""
 connect()
 fetch_email()
 
