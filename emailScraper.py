@@ -1,7 +1,4 @@
 #! /usr/bin/python
-"""
-the purpose of this program is to scrape my email account and find key phrases within my email.
-"""
 # setting up the rudimentary bits to send email via Python.
 import smtplib, imapclient, pyzmail, pprint
 myPassword = raw_input("Please do not save your password in the source code, please enter it instead: ")
