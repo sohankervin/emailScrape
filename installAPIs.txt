@@ -1,0 +1,5 @@
+# the following reflects the APIs which I needed to install for 
+my email scraping program utilizing the Pip package manager.
+
+pip install pyzmail
+pip install imapclient
