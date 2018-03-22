@@ -32,6 +32,8 @@ def fetch_email() :
 
     # this will allow me to fetch my emails from a specific folder utilizing the UID returned from the previous function.
     creamer = coffee.fetch(UIDs, ['BODY[]'])
+    >>28400
+    
     emailMessage = pyzmail.PyzMessage.factory(creamer[28400 ]['BODY[]'])
 
 
